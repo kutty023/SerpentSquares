@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SerpentSquares</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heading">
+        <h1><a href="./index.html">Enter your name!</a></h1>
+    </div>
+    <div class="formcontainer">
+        <div class="rules">
+            <h2>Instruction To Play </h2>
+            <ol>
+                <li>Red coloured sphere is the food</li>
+                <li>Use Arrow keys to move the snake</li>
+                <li>If the snake touches the wall the game is over</li>
+                <li>Refresh to restart the game</li>
+            </ol>
+        </div>
+        <form id="userForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="nickname">Nickname:</label>
+            <input type="text" id="nickname" name="nickname" required><br>
+            <button id="start">Start!</button>
+      </form>
+    </div>
+    <footer>
+       <p>ContactUs</p> 
+    </footer>
+    <script>        
+        const startButton = document.getElementById("start");
+        startButton.addEventListener("click", redirectToSnakePage);
+
+        window.onload = function() {
+            document.getElementById("name").value="";
+            document.getElementById("nickname").value="";
+        };
+
+        function redirectToSnakePage(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const nickname = document.getElementById("nickname").value;
+
+            window.location.href = `snake.html?nickname=${encodeURIComponent(nickname)}`;
+        }
+    </script>
+</body>
+</html>

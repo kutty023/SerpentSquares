@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SerpentSquares</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heading">
+        <h1><a href="#">SerpentSquares</a></h1>
+    </div>
+    <div class="con">
+        <div class="container">
+            <p><b>"SerpentSquares"</b> is an addictive and fast-paced snake game where players navigate a grid, controlling a slithering snake with arrow keys. The goal is to guide the snake to devour delicious food scattered throughout the grid, causing its length to grow. However, players must be cautious to avoid walls and prevent the snake from colliding with its own elongating body, as a single misstep leads to a game-ending collision.</p>
+            <p id="excited">Can you skillfully maneuver the SerpentSquares and achieve a high score?</p>
+            <button id="startButton"> Get Started -></button>
+        </div>
+    </div>
+    <footer>
+       <p>ContactUs</p> 
+    </footer>
+    <script>
+        const getStartedButton = document.getElementById("startButton")
+        getStartedButton.addEventListener("click", redirectToNamingPage)
+
+        function redirectToNamingPage() {
+            window.location.href = "./naming.html"
+        }
+    </script>
+</body>
+</html>
